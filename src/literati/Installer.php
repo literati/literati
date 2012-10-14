@@ -21,6 +21,15 @@ class Installer extends LibraryInstaller {
             list($vendor, $name) = explode('/', $package->getName());
 
             switch(strtolower($name)){
+                case "teiinteract":
+                    $name = "TeiInteract";
+                    break;
+                case "teidisplay":
+                    $name = "TeiDisplay";
+                    break;
+                case "plugin-itemrelations":
+                    $name = "ItemRelations";
+                    break;
                 case "annotations":
                     $name = "Annotations";
                     break;
