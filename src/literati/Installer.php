@@ -24,6 +24,9 @@ class Installer extends LibraryInstaller {
          * {@inheritDoc}
          */
         public function supports($packageType) {
-            return $packageType == 'omeka-plugin';
+            $types = array('omeka-plugin','omeka-theme');
+            foreach($types as $type){
+                if($type == $packageType) return true;
+            }
         }
 }
