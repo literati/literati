@@ -20,9 +20,11 @@ class Installer extends LibraryInstaller {
             switch($package->getType()){
             case "omeka-plugin":
                 return "plugins/".$name;
+                echo sprintf("setting install path for %s => %s", $vendor.'/'.$name, 'plugins/'.$name);
                 break;
             case "omeka-theme":
                 return "themes/".$name;
+                echo sprintf("setting install path for %s => %s", $vendor.'/'.$name, 'themes/'.$name);
                 break;
             case "main-project":
                 return ".";
