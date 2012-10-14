@@ -6,10 +6,12 @@ namespace literati;
 
 use Composer\Package\PackageInterface;
 use Composer\Installer\LibraryInstaller;
+
 /**
- * * Install sledgehammer modules via composer.
- * * @link http://getcomposer.org
- * */
+ * patterned after:
+ * https://github.com/RobLoach/composer-installer
+ * https://github.com/sledgehammer/composer-installer
+ */
 class Installer extends LibraryInstaller {
 
         /**
@@ -17,6 +19,14 @@ class Installer extends LibraryInstaller {
          */
         public function getInstallPath(PackageInterface $package) {
             list($vendor, $name) = explode('/', $package->getName());
+
+            switch(strtolower($name)){
+                case "annotations":
+                    $name = Annotations;
+                    break;
+            }
+
+
             switch($package->getType()){
             case "omeka-plugin":
                 return "plugins/".$name;
