@@ -17,7 +17,17 @@ class Installer extends LibraryInstaller {
          */
         public function getInstallPath(PackageInterface $package) {
             list($vendor, $name) = explode('/', $package->getName());
-            return "plugins/".strtolower($name);
+            switch($package->getType()){
+            case "omeka-plugin":
+                return "plugins/".strtolower($name);
+                break;
+            case "omeka-theme":
+                return "themes/".strtolower($name);
+                break;
+            case "main-project":
+                return ".";
+                break;
+            }
         }
 
         /**
@@ -25,8 +35,6 @@ class Installer extends LibraryInstaller {
          */
         public function supports($packageType) {
             $types = array('omeka-plugin','omeka-theme');
-            foreach($types as $type){
-                if($type == $packageType) return true;
-            }
+            return in_array($types, $packageType);
         }
 }
