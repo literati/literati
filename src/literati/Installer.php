@@ -35,6 +35,6 @@ class Installer extends LibraryInstaller {
          */
         public function supports($packageType) {
             $types = array('omeka-plugin','omeka-theme');
-            return in_array($types, $packageType);
+            return in_array($packageType, $types);
         }
 }
