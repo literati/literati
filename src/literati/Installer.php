@@ -22,7 +22,7 @@ class Installer extends LibraryInstaller {
 
             switch(strtolower($name)){
                 case "annotations":
-                    $name = Annotations;
+                    $name = "Annotations";
                     break;
             }
 
