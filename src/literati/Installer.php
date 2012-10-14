@@ -19,10 +19,10 @@ class Installer extends LibraryInstaller {
             list($vendor, $name) = explode('/', $package->getName());
             switch($package->getType()){
             case "omeka-plugin":
-                return "plugins/".strtolower($name);
+                return "plugins/".$name;
                 break;
             case "omeka-theme":
-                return "themes/".strtolower($name);
+                return "themes/".$name;
                 break;
             case "main-project":
                 return ".";
