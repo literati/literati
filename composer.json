@@ -1,5 +1,5 @@
 {
-    "name": "installer",
+    "name": "literati/installer",
     "type": "composer-installer",
     "autoload": {
         "psr-0": {"literati": "src/"}
