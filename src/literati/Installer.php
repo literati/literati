@@ -27,6 +27,9 @@ class Installer extends LibraryInstaller {
                 'plugin-collectiontree' => 'CollectionTree',
                 'plugin-geolocation'    => 'Geolocation',
                 'neatline'              => 'Neatline',
+                'neatlinefeatures'      => 'NeatlineFeatures',
+                'neatlinemaps'          => 'NeatlineMaps',
+                'neatlinetime'          => 'NeatlineTime',
                 'annotations'           => 'Annotations'
                 );
             
