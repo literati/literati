@@ -20,19 +20,16 @@ class Installer extends LibraryInstaller {
         public function getInstallPath(PackageInterface $package) {
             list($vendor, $name) = explode('/', $package->getName());
 
-            switch(strtolower($name)){
-                case "teiinteract":
-                    $name = "TeiInteract";
-                    break;
-                case "teidisplay":
-                    $name = "TeiDisplay";
-                    break;
-                case "plugin-itemrelations":
-                    $name = "ItemRelations";
-                    break;
-                case "annotations":
-                    $name = "Annotations";
-                    break;
+            $namesMap = array(
+                'teiinteract'           => 'TeiInteract',
+                'teidisplay'            => 'TeiDisplay',
+                'plugin-ItemRelations'  => 'ItemRelations',
+                'plugin-CollectionTree' => 'CollectionTree',
+                'annotations'           => 'Annotations'
+                )
+            
+            foreach($namesMap as $k => $v){
+                if(strtolower($k) == $name) $name = $v;
             }
 
 
