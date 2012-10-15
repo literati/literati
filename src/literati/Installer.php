@@ -23,13 +23,15 @@ class Installer extends LibraryInstaller {
             $namesMap = array(
                 'teiinteract'           => 'TeiInteract',
                 'teidisplay'            => 'TeiDisplay',
-                'plugin-ItemRelations'  => 'ItemRelations',
-                'plugin-CollectionTree' => 'CollectionTree',
+                'plugin-itemrelations'  => 'ItemRelations',
+                'plugin-collectiontree' => 'CollectionTree',
                 'annotations'           => 'Annotations'
                 );
             
             foreach($namesMap as $k => $v){
-                if(strtolower($k) == $name) $name = $v;
+                if(strtolower($k) == strtolower($name)){
+                    $name = $v;
+                }
             }
 
 
