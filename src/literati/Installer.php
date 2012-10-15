@@ -25,6 +25,8 @@ class Installer extends LibraryInstaller {
                 'teidisplay'            => 'TeiDisplay',
                 'plugin-itemrelations'  => 'ItemRelations',
                 'plugin-collectiontree' => 'CollectionTree',
+                'plugin-geolocation'    => 'Geolocation',
+                'neatline'              => 'Neatline',
                 'annotations'           => 'Annotations'
                 );
             
