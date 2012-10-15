@@ -26,7 +26,7 @@ class Installer extends LibraryInstaller {
                 'plugin-ItemRelations'  => 'ItemRelations',
                 'plugin-CollectionTree' => 'CollectionTree',
                 'annotations'           => 'Annotations'
-                )
+                );
             
             foreach($namesMap as $k => $v){
                 if(strtolower($k) == $name) $name = $v;
